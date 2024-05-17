@@ -29,6 +29,17 @@ console.log(JsUser[mySym]);
 console.log(typeof(JsUser.mySym)); 
 
 JsUser.email = "ccp@chatgpt.com"  //overwriting the value
-Object.freeze(JsUser)
+// Object.freeze(JsUser)
 JsUser.email = "ccp@microsoft.com"
 console.log(JsUser);
+
+
+JsUser.greeting = function(){
+    console.log("Hello coder");
+}
+JsUser.greetingTwo = function(){
+    console.log(`Hello coder, ${this.name}`);
+}
+console.log(JsUser.greeting);
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
